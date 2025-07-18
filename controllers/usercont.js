@@ -59,10 +59,10 @@ const get = async (req, res) => {
 const getByEmail = async (req, res) => {
     try {
         const user = await usermodel.findOne({ email: req.params.email });
-        if (!user) return res.status(404).json({ msg: "User not found" });
+        if (!user) return res.json({ msg: "User not found" });
         res.json(user);
     } catch (err) {
-        res.status(500).json({ err: err.message });
+        res.json({ err: err.message });
     }
 };
 
