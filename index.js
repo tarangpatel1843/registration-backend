@@ -17,7 +17,7 @@ mongoose.connect(MONGO_URI).then(() => {
 });
 
 
-app.use(cors({ origin: CLIENT_URL, credentials: true }));
+app.use(cors({ origin: 'https://registration-frontend-l8ybq1v8z-tarangs-projects-220ff129.vercel.app', credentials: true }));
 app.use(express.json());
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
